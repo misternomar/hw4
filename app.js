@@ -6,10 +6,10 @@
 const express = require("express");
 const app = express();
 
-const faker = require('faker');
-const randomFirstName = faker.name.firstName();
-const randomLastName = faker.name.lastName();
-const randomEmail = faker.internet.email(randomFirstName, randomLastName);
+var faker = require('faker');
+var randomFirstName = faker.name.firstName();
+var randomLastName = faker.name.lastName();
+var randomEmail = faker.internet.email(randomFirstName, randomLastName);
 
 
 app.engine("html", require("ejs").renderFile);
