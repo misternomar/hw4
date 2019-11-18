@@ -6,50 +6,54 @@
 const express = require("express");
 const app = express();
 
-var faker = require("faker");
-var randomFirstName = faker.name.firstName();
-var randomLastName = faker.name.lastName();
-var randomEmail = faker.internet.email(randomFirstName, randomLastName);
+const faker = require('faker');
+const randomFirstName = faker.name.firstName();
+const randomLastName = faker.name.lastName();
+const randomEmail = faker.internet.email(randomFirstName, randomLastName);
 
 
 app.engine("html", require("ejs").renderFile);
 app.use(express.static("public"));
+
     
 // routes
 app.get("/", function(req, res) {
-    res.render("index.html");
+    res.render("index.ejs", {email:randomEmail});
 });
 
 app.get("/planning", function(req, res) {
-    res.render("planning.html");
+    
+    res.render("planning.ejs", {email:randomEmail});
 });
 
 app.get("/requirements", function(req, res) {
-    res.render("requirements.html");
+    
+    res.render("requirements.ejs", {email:randomEmail});
 });
 
 app.get("/design", function(req, res) {
-    res.render("design.html");
+    
+    res.render("design.ejs", {email:randomEmail});
 });
 
 app.get("/softwareDevelopment", function(req, res) {
-    res.render("softwareDevelopment.html");
+    
+    res.render("softwareDevelopment.ejs", {email:randomEmail});
 });
 
 app.get("/testing", function(req, res) {
-    res.render("testing.html");
+    
+    res.render("testing.ejs", {email:randomEmail});
 });
 
 app.get("/deployment", function(req, res) {
-    res.render("deployment.html");
+                                                                                            
+    res.render("deployment.ejs", {email:randomEmail});
 });
 
 app.get("/operationMaintenance", function(req, res) {
-    res.render("operationMaintenance.html");
-});
-
-app.use(function(req, res) {
-    res.render("partials/footer.ejs", {"randomEmail": value});
+    
+    res.render("operationMaintenance.ejs", {email:randomEmail});
 });
 
 

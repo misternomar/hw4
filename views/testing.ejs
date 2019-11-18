@@ -1,23 +1,28 @@
-<% include partials/header_planning.ejs %>
+<% include partials/header_testing.ejs %>
 <br />
         <header><h1> Software Development Life Cycle </h1></header>
         <br />
         <br />
     
     <main class="container">
-        <figure><img src="/img/pimage.jpg" alt="Planning Image" width="300">
-        <figcaption>Figure 2: Planning</figcaption>
+        <figure><img src="/img/timage.jpg" alt="Testing Image" 
+        width="300">
+        <figcaption>Figure 6: Testing</figcaption>
         </figure>
         <div class="content">
-            <h2>Planning</h2><br />
-            The <u>planning</u> phase requires a confluence of product and project 
-            management.  The main point of planning is to be able to 
-            successfully deliver a software product that meets everyone's needs.
-            During this phase, the allocation of resources have to be 
-            determined.  The capacity and scope of the project have to be 
-            delineated.  A schedulue has to be designed to meet deadlines.  
-            There has to be a determination and projection in cost.  
-            Provisions have to be defined.
+            <h2>Testing</h2><br />
+            There are various types of <u>testing</u>.  The following are the usual 
+            types of testing conducted:<br />
+            <ul>
+                <li>code quality testing</li>
+                <li>functional testing</li>
+                <li>integration testing</li>
+                <li>performance testing</li>
+                <li>security testing</li>
+            </ul>
+            These tests can be automated.  The software has to be 
+            fully-functioning and amply prepared for deployment to the 
+            production environment.
         </div>
         <div class="sidebar">
             <nav>
@@ -35,4 +40,8 @@
             </nav>
         </div>
     </main>
+    <br><br>
+<div id="footer">
+    <a id="email" href="mailto:<%= email %>">Contact Us</a>
+</div>
 <% include partials/footer.ejs %>

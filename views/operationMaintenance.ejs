@@ -1,28 +1,20 @@
-<% include partials/header_testing.ejs %>
+<% include partials/header_operationMaintenance.ejs %>
 <br />
         <header><h1> Software Development Life Cycle </h1></header>
         <br />
         <br />
     
     <main class="container">
-        <figure><img src="/img/timage.jpg" alt="Testing Image" 
+        <figure><img src="/img/oimage.jpg" alt="Operation and Maintenance Image" 
         width="300">
-        <figcaption>Figure 6: Testing</figcaption>
+        <figcaption>Figure 8: Operation and Maintenance</figcaption>
         </figure>
         <div class="content">
-            <h2>Testing</h2><br />
-            There are various types of <u>testing</u>.  The following are the usual 
-            types of testing conducted:<br />
-            <ul>
-                <li>code quality testing</li>
-                <li>functional testing</li>
-                <li>integration testing</li>
-                <li>performance testing</li>
-                <li>security testing</li>
-            </ul>
-            These tests can be automated.  The software has to be 
-            fully-functioning and amply prepared for deployment to the 
-            production environment.
+            <h2>Operation and Maintenance</h2><br />
+            The <u>operation and maintenance</u> phase does not signal the end of the 
+            Software Development Life Cycle.  This phase deals with ongoing or 
+            continued operation or use of the developed software.  Monitoring is 
+            constant.  During this phase, any bugs that are detected are fixed.
         </div>
         <div class="sidebar">
             <nav>
@@ -40,4 +32,8 @@
             </nav>
         </div>
     </main>
+    <br><br>
+<div id="footer">
+    <a id="email" href="mailto:<%= email %>">Contact Us</a>
+</div>
 <% include partials/footer.ejs %>
